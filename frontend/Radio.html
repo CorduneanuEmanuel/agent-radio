@@ -67,6 +67,50 @@
                 </div>
             </div>
 
+            <div class="bg-black border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl shadow-emerald-900/5">
+                <div class="bg-zinc-900/80 px-5 py-3 border-b border-zinc-800 flex items-center justify-between">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-500 mono">Ollama Thinking Process</span>
+                    <div class="flex gap-1.5">
+                        <div class="w-2.5 h-2.5 rounded-full bg-red-500/20"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/20"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-500/20"></div>
+                    </div>
+                </div>
+                <div class="p-6 h-80 overflow-y-auto scanline relative">
+                    <div id="ai-output" hx-get="/ai-stream" hx-trigger="every 1s" class="mono text-sm leading-relaxed text-emerald-400/90 whitespace-pre-wrap">
+                        > Initializing agents...
+                        > Waiting for Essentia analysis data...
+                        > Ready.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lg:col-span-5 space-y-6">
+
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-2 group transition-all">
+                <label for="file-input" id="drop-zone" 
+                    class="block border-2 border-dashed border-zinc-700 p-12 rounded-[1.4rem] text-center cursor-pointer hover:border-blue-500/50 hover:bg-blue-500/5 transition-all relative">
+                    <input type="file" name="file" class="hidden" id="file-input" 
+                           onchange="document.getElementById('file-name').innerText = this.files[0].name">
+                    
+                    <div class="space-y-4">
+                        <div class="bg-zinc-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-zinc-200">Adaugă melodii noi</p>
+                            <p class="text-xs text-zinc-500 mt-1 uppercase tracking-tighter">Essentia local analysis</p>
+                        </div>
+                        <p id="file-name" class="text-blue-400 font-mono text-xs italic"></p>
+                    </div>
+                </label>
+                <button hx-post="/upload" hx-include="#file-input" hx-target="#stats-display"
+                        class="w-full mt-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-2xl transition-all active:scale-[0.98]">
+                    LANSEAZĂ ANALIZA
+                </button>
+            </div>
+
             
         </section>
     </main>
