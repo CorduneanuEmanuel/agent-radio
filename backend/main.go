@@ -38,7 +38,7 @@ func main() {
 	http.HandleFunc("/upload", func(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Access-Control-Allow-Origin", "*")
     w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+    w.Header().Set("Access-Control-Allow-Headers", "*")
 
     if r.Method == http.MethodOptions {
         return
@@ -56,7 +56,7 @@ func main() {
     }
     defer file.Close()
 
-    dst, err := os.Create("/music/" + header.Filename)
+    dst, err := os.Create("music/" + header.Filename)
     if err != nil {
         http.Error(w, "could not save file", http.StatusInternalServerError)
         return
