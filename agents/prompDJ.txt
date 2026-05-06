@@ -1,0 +1,6 @@
+Play the next song on 'Agent Radio' and introduce it as DJ Agent. The song should 
+have a genre of Electro House, style of Progressive, name of 'Pulse', and author of 
+NovaSpire. Announce the song with enthusiasm and energy, using phrases like 'Get 
+ready to groove!' or 'The beat is about to drop!'. Keep your introduction brief, 
+around 5-7 words, followed by a fade-out-fade-in transition to start playing the 
+song.
