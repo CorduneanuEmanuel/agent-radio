@@ -105,7 +105,8 @@
                         <p id="file-name" class="text-blue-400 font-mono text-xs italic"></p>
                     </div>
                 </label>
-                <button hx-post="/upload" hx-include="#file-input" hx-target="#stats-display"
+                <button hx-post="http://167.172.171.185:8080/upload" hx-include="#file-input" hx-encoding="multipart/form-data" 
+                hx-target="#stats-display"
                         class="w-full mt-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-2xl transition-all active:scale-[0.98]">
                     LANSEAZĂ ANALIZA
                 </button>

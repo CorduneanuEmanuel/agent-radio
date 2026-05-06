@@ -39,28 +39,36 @@ func main() {
 	})
 
 	http.HandleFunc("/upload", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodPost {
-			http.Error(w, "Method needs to be POST", http.StatusMethodNotAllowed)
-			return
-		}
+    w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
-		file, header, err := r.FormFile("file")
-		if err != nil {
-			http.Error(w, "could not read file", http.StatusBadRequest)
-			return
-		}
-		defer file.Close()
+    if r.Method == http.MethodOptions {
+        return
+    }
 
-		dst, err := os.Create("/music/" + header.Filename)
-		if err != nil {
-			http.Error(w, "could not save file", http.StatusInternalServerError)
-			return
-		}
-		defer dst.Close()
-		io.Copy(dst, file)
+    if r.Method != http.MethodPost {
+        http.Error(w, "Method needs to be POST", http.StatusMethodNotAllowed)
+        return
+    }
 
-		fmt.Fprintln(w, "upload successful")
-	})
+    file, header, err := r.FormFile("file")
+    if err != nil {
+        http.Error(w, "could not read file", http.StatusBadRequest)
+        return
+    }
+    defer file.Close()
+
+    dst, err := os.Create("/music/" + header.Filename)
+    if err != nil {
+        http.Error(w, "could not save file", http.StatusInternalServerError)
+        return
+    }
+    defer dst.Close()
+    io.Copy(dst, file)
+
+    fmt.Fprintln(w, "upload successful")
+})
 
 	http.HandleFunc("/events", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/event-stream")
