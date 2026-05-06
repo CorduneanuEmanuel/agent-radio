@@ -1,0 +1,343 @@
+2026/05/06 08:12:24 >>> LOG START
+2026/05/06 08:12:13 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/05/06 08:12:13 [main:3] Liquidsoap 2.2.4-1+dev
+2026/05/06 08:12:13 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/05/06 08:12:13 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/05/06 08:12:23 [main:3] Standard library loaded in 9.61 seconds.
+2026/05/06 08:12:24 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/05/06 08:12:24 [frame:3] Video frame size set to: 1280x720
+2026/05/06 08:12:24 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/05/06 08:12:24 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/05/06 08:12:24 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/05/06 08:12:24 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/05/06 08:12:24 [startup:3] DSSI plugins registration: 0.00s
+2026/05/06 08:12:24 [startup:3] FFmpeg filters registration: 0.05s
+2026/05/06 08:12:24 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/05/06 08:12:24 [startup:3] Frei0r plugin registration: 0.00s
+2026/05/06 08:12:24 [startup:3] LADSPA plugins registration: 0.00s
+2026/05/06 08:12:24 [startup:3] Typechecking: 9.02s
+2026/05/06 08:12:24 [startup:3] Evaluation: 0.03s
+2026/05/06 08:12:24 [startup:3] Typechecking: 0.08s
+2026/05/06 08:12:24 [startup:3] Evaluation: 0.01s
+2026/05/06 08:12:24 [startup:3] Typechecking: 0.01s
+2026/05/06 08:12:24 [startup:3] Evaluation: 0.00s
+2026/05/06 08:12:24 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/05/06 08:12:24 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:12:24 [music:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:12:24 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:12:24 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/05/06 08:12:24 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/05/06 08:12:24 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/05/06 08:12:24 [clock.main:3] Delegating synchronization to CPU clock
+2026/05/06 08:12:24 [video.text:3] Using gd implementation
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748340005040] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748340005040] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/05/06 08:12:24 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/05/06 08:12:24 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/05/06 08:12:24 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748340005040] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748340005040] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/05/06 08:12:24 [mksafe:3] Switch to safe_blank.
+2026/05/06 08:12:24 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:12:24 [/radio:3] Connection setup was successful.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748344064ac0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748344064ac0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748344064ac0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748344064ac0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/05/06 08:12:24 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 0).
+2026/05/06 08:12:24 [mksafe:3] Switch to music with transition.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x74833c004f00] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x74833c004f00] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x74833c004f00] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x74833c004f00] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/05/06 08:12:24 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/05/06 08:12:24 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/05/06 08:12:24 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/05/06 08:12:47 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748344064ac0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748344064ac0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748344064ac0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x748344064ac0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/05/06 08:12:48 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 1).
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x74833c004f00] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x74833c004f00] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/05/06 08:12:48 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/05/06 08:12:48 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/05/06 08:12:48 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x74833c004f00] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x74833c004f00] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/05/06 08:13:11 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/05/06 08:13:11 [music:2] Finished with a non-existent file?! Something may have been moved or destroyed during decoding. It is VERY dangerous, avoid it!
+2026/05/06 08:13:11 [music:1] Failed to prepare track: request not ready.
+2026/05/06 08:13:11 [mksafe:3] Switch to safe_blank with forgetful transition.
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:11 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:13 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:14 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:15 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:16 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:17 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:18 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:19 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:20 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:21 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:22 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:23 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:24 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:25 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:26 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:27 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:28 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:29 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:30 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:31 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:32 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:33 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:34 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:35 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:36 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:37 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:38 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:40 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:41 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:42 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:43 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:44 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:45 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:46 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:47 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:48 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:49 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:50 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:51 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:52 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:53 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:54 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:55 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:56 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:57 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:58 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:13:59 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:14:00 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:14:01 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:14:02 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:14:03 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:14:04 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:14:06 [request:3] Nonexistent file or ill-formed URI "/music/Krieger - And One [ZTMlVTyFCKw].mp3"!
+2026/05/06 08:14:06 [main:3] Shutdown signal received.
+2026/05/06 08:14:06 [threads:3] Main loop exited
+2026/05/06 08:14:06 [main:3] Shutdown started!
+2026/05/06 08:14:06 [threads:3] Waiting for main threads to terminate...
+2026/05/06 08:14:06 [/radio:3] Closing connection...
+2026/05/06 08:14:06 [clock.main:3] Streaming loop stopped.
+2026/05/06 08:14:06 [threads:3] Main threads terminated.
+2026/05/06 08:14:06 [threads:3] Shutting down scheduler...
+2026/05/06 08:14:34 >>> LOG START
+2026/05/06 08:14:23 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/05/06 08:14:23 [main:3] Liquidsoap 2.2.4-1+dev
+2026/05/06 08:14:23 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/05/06 08:14:23 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/05/06 08:14:34 [main:3] Standard library loaded in 10.54 seconds.
+2026/05/06 08:14:34 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/05/06 08:14:34 [frame:3] Video frame size set to: 1280x720
+2026/05/06 08:14:34 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/05/06 08:14:34 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/05/06 08:14:34 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/05/06 08:14:34 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/05/06 08:14:34 [startup:3] DSSI plugins registration: 0.00s
+2026/05/06 08:14:34 [startup:3] FFmpeg filters registration: 0.06s
+2026/05/06 08:14:34 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/05/06 08:14:34 [startup:3] Frei0r plugin registration: 0.00s
+2026/05/06 08:14:34 [startup:3] LADSPA plugins registration: 0.00s
+2026/05/06 08:14:34 [startup:3] Typechecking: 9.97s
+2026/05/06 08:14:34 [startup:3] Evaluation: 0.03s
+2026/05/06 08:14:34 [startup:3] Typechecking: 0.08s
+2026/05/06 08:14:34 [startup:3] Evaluation: 0.01s
+2026/05/06 08:14:34 [startup:3] Typechecking: 0.01s
+2026/05/06 08:14:34 [startup:3] Evaluation: 0.00s
+2026/05/06 08:14:34 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/05/06 08:14:34 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:14:34 [music:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:14:34 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:14:34 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/05/06 08:14:34 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/05/06 08:14:34 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/05/06 08:14:34 [clock.main:3] Delegating synchronization to CPU clock
+2026/05/06 08:14:34 [video.text:3] Using gd implementation
+[mp3 @ 0x7dd684005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:14:34 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/05/06 08:14:34 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:14:34 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7dd684005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:14:34 [mksafe:3] Switch to safe_blank.
+[mp3 @ 0x7dd68c004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7dd68c004c80] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:14:34 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 0).
+2026/05/06 08:14:34 [mksafe:3] Switch to music with transition.
+2026/05/06 08:14:34 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:14:34 [/radio:3] Connection setup was successful.
+[mp3 @ 0x7dd680005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:14:34 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/05/06 08:14:34 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:14:34 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7dd680005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:15:56 [main:3] Shutdown signal received.
+2026/05/06 08:15:56 [threads:3] Main loop exited
+2026/05/06 08:15:56 [main:3] Shutdown started!
+2026/05/06 08:15:56 [threads:3] Waiting for main threads to terminate...
+2026/05/06 08:15:56 [/radio:3] Closing connection...
+2026/05/06 08:15:56 [clock.main:3] Streaming loop stopped.
+2026/05/06 08:15:56 [threads:3] Main threads terminated.
+2026/05/06 08:15:56 [threads:3] Shutting down scheduler...
+2026/05/06 08:16:12 >>> LOG START
+2026/05/06 08:16:01 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/05/06 08:16:01 [main:3] Liquidsoap 2.2.4-1+dev
+2026/05/06 08:16:01 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/05/06 08:16:01 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/05/06 08:16:11 [main:3] Standard library loaded in 10.04 seconds.
+2026/05/06 08:16:12 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/05/06 08:16:12 [frame:3] Video frame size set to: 1280x720
+2026/05/06 08:16:12 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/05/06 08:16:12 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/05/06 08:16:12 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/05/06 08:16:12 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/05/06 08:16:12 [startup:3] DSSI plugins registration: 0.00s
+2026/05/06 08:16:12 [startup:3] FFmpeg filters registration: 0.05s
+2026/05/06 08:16:12 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/05/06 08:16:12 [startup:3] Frei0r plugin registration: 0.00s
+2026/05/06 08:16:12 [startup:3] LADSPA plugins registration: 0.00s
+2026/05/06 08:16:12 [startup:3] Typechecking: 9.51s
+2026/05/06 08:16:12 [startup:3] Evaluation: 0.02s
+2026/05/06 08:16:12 [startup:3] Typechecking: 0.07s
+2026/05/06 08:16:12 [startup:3] Evaluation: 0.01s
+2026/05/06 08:16:12 [startup:3] Typechecking: 0.01s
+2026/05/06 08:16:12 [startup:3] Evaluation: 0.00s
+2026/05/06 08:16:12 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/05/06 08:16:12 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:16:12 [music:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:16:12 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:16:12 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/05/06 08:16:12 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/05/06 08:16:12 [video.text:3] Using gd implementation
+2026/05/06 08:16:12 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/05/06 08:16:12 [clock.main:3] Delegating synchronization to CPU clock
+[mp3 @ 0x7a7e24005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:12 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/05/06 08:16:12 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:16:12 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7a7e24005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:12 [mksafe:3] Switch to safe_blank.
+[mp3 @ 0x7a7e1c004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7a7e1c004c80] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:12 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 0).
+2026/05/06 08:16:12 [mksafe:3] Switch to music with transition.
+2026/05/06 08:16:12 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:16:12 [/radio:3] Connection setup was successful.
+[mp3 @ 0x7a7e28005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:12 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/05/06 08:16:12 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:16:12 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7a7e28005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:59 >>> LOG START
+2026/05/06 08:16:47 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/05/06 08:16:47 [main:3] Liquidsoap 2.2.4-1+dev
+2026/05/06 08:16:47 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/05/06 08:16:47 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/05/06 08:16:59 [main:3] Standard library loaded in 11.16 seconds.
+2026/05/06 08:16:59 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/05/06 08:16:59 [frame:3] Video frame size set to: 1280x720
+2026/05/06 08:16:59 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/05/06 08:16:59 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/05/06 08:16:59 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/05/06 08:16:59 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/05/06 08:16:59 [startup:3] DSSI plugins registration: 0.00s
+2026/05/06 08:16:59 [startup:3] FFmpeg filters registration: 0.06s
+2026/05/06 08:16:59 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/05/06 08:16:59 [startup:3] Frei0r plugin registration: 0.00s
+2026/05/06 08:16:59 [startup:3] LADSPA plugins registration: 0.00s
+2026/05/06 08:16:59 [startup:3] Typechecking: 10.58s
+2026/05/06 08:16:59 [startup:3] Evaluation: 0.03s
+2026/05/06 08:16:59 [startup:3] Typechecking: 0.08s
+2026/05/06 08:16:59 [startup:3] Evaluation: 0.01s
+2026/05/06 08:16:59 [startup:3] Typechecking: 0.01s
+2026/05/06 08:16:59 [startup:3] Evaluation: 0.00s
+2026/05/06 08:16:59 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/05/06 08:16:59 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:16:59 [music:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:16:59 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/05/06 08:16:59 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/05/06 08:16:59 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/05/06 08:16:59 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/05/06 08:16:59 [clock.main:3] Delegating synchronization to CPU clock
+2026/05/06 08:16:59 [video.text:3] Using gd implementation
+[mp3 @ 0x7b6364005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:59 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/05/06 08:16:59 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:16:59 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b6364005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:59 [mksafe:3] Switch to safe_blank.
+[mp3 @ 0x7b636c004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b636c004c80] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:59 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 0).
+2026/05/06 08:16:59 [mksafe:3] Switch to music with transition.
+2026/05/06 08:16:59 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:16:59 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
+2026/05/06 08:16:59 [/radio:3] Will try again in 3.00 sec.
+[mp3 @ 0x7b635c005000] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:16:59 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/05/06 08:16:59 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:16:59 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b635c005000] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:17:03 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:17:03 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
+2026/05/06 08:17:03 [/radio:3] Will try again in 3.00 sec.
+2026/05/06 08:17:04 [music:3] Reloading playlist with URI /music/.
+2026/05/06 08:17:04 [music:3] Reloading playlist with URI /music/.
+[mp3 @ 0x7b6364005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:17:04 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b6364005080] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7a7e24005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:17:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:17:04 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b635c005000] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b635c005000] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/05/06 08:17:04 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/05/06 08:17:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:17:04 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7a7e28005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:17:04 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/05/06 08:17:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/05/06 08:17:04 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7a7e24005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:17:04 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/05/06 08:17:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/05/06 08:17:04 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b635c005000] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b635c005000] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3 @ 0x7a7e28005080] Estimating duration from bitrate, this may be inaccurate
+2026/05/06 08:17:07 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:17:07 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
+2026/05/06 08:17:07 [/radio:3] Will try again in 3.00 sec.
+2026/05/06 08:17:11 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:17:11 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
+2026/05/06 08:17:11 [/radio:3] Will try again in 3.00 sec.
+2026/05/06 08:17:15 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:17:15 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
+2026/05/06 08:17:15 [/radio:3] Will try again in 3.00 sec.
+2026/05/06 08:17:19 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:17:19 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
+2026/05/06 08:17:19 [/radio:3] Will try again in 3.00 sec.
+2026/05/06 08:17:23 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:17:23 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
+2026/05/06 08:17:23 [/radio:3] Will try again in 3.00 sec.
+2026/05/06 08:17:27 [/radio:3] Connecting mount /radio for source@localhost...
+2026/05/06 08:17:27 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
+2026/05/06 08:17:27 [/radio:3] Will try again in 3.00 sec.
