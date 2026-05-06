@@ -7,6 +7,32 @@ import (
 	"os"
 )
 
+
+type State int
+
+const (
+	Idle State = iota
+	Selecting
+	Generating
+	Ready
+	Playing
+)
+
+var currentState = Idle
+
+func setState(s State) {
+	currentState = s
+	states := map[State]string{
+		Idle:       "idle",
+		Selecting:  "selecting",
+		Generating: "generating",
+		Ready:      "ready",
+		Playing:    "playing",
+	}
+	fmt.Printf("State: %s\n", states[s])
+}
+
+
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "Go server is running")
