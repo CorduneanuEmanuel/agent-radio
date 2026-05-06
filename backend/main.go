@@ -34,10 +34,7 @@ func setState(s State) {
 
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Go server is running")
-	})
-
+	http.Handle("/", http.FileServer(http.Dir("/root/agent-radio/frontend")))
 	http.HandleFunc("/upload", func(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Access-Control-Allow-Origin", "*")
     w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
