@@ -1,0 +1,4 @@
+backend/backend
+librarian/__pycache__
+librarian/*.db
+*.out
