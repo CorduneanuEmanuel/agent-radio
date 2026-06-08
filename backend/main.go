@@ -101,7 +101,7 @@ func main() {
 	}
 	defer db.Close()
 
-	http.Handle("/", http.FileServer(http.Dir("/root/agent-radio/frontend")))
+	http.Handle("/", http.FileServer(http.Dir("/root/agent-radio/frontend/agent-radio/dist")))
 
 	http.HandleFunc("/upload", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
