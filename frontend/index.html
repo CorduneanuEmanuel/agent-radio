@@ -6,8 +6,10 @@
     <title>AI DJ Radio Console</title>
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- ADAUGAT: Extensia SSE pentru comunicare în timp real -->
     <script src="https://unpkg.com/htmx.org/dist/ext/sse.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap');
         
@@ -26,7 +28,6 @@
         }
         .ai-pulse { animation: pulse-cyan 2s infinite; }
 
-        /* stil pentru bara de progres */
         .progress-bar {
             height: 4px;
             width: 0%;
@@ -81,9 +82,7 @@
                 <h2 class="text-zinc-500 text-xs font-bold uppercase tracking-[0.2em] mb-4">On Air / Icecast Stream</h2>
                 <div class="flex flex-col gap-6">
                     <div class="flex items-center gap-6">
-                        <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-900 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-900/20">
-                            <span class="text-3xl animate-bounce">📻</span>
-                        </div>
+                        <div id="spinning-note-root"></div>
                         <div>
                             <h3 class="text-2xl font-bold">AI Curator Session</h3>
                             <p class="text-zinc-400 text-sm mono">Host: Chatterbox TTS</p>
@@ -161,6 +160,8 @@
 
                 <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-600/5 rounded-full blur-[80px]"></div>
             </div>
+
+            <div id="success-message-root"></div>
         </section>
     </main>
 
@@ -168,16 +169,61 @@
         Proiectat cu HTMX + Tailwind + Ollama | Procesare locală în Python
     </footer>
 
-    <script>
-        function showSuccessMessage() {
-            const msg = document.createElement('div');
-            msg.className = 'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold text-lg success-message flex items-center gap-3';
-            msg.innerHTML = '<span>✓</span> Fișier adăugat cu succes!';
-            document.body.appendChild(msg);
-            
-            setTimeout(() => msg.remove(), 2000);
-        }
+    <script type="text/babel">
+        // SpinningNote Component
+        const SpinningNote = () => {
+            return (
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-900 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-900/20 note-spin-trigger cursor-pointer">
+                    <span className="text-3xl animate-bounce note-spin-icon">📻</span>
+                </div>
+            );
+        };
 
+        // SuccessMessage Component
+        const SuccessMessage = ({ isVisible, onClose }) => {
+            React.useEffect(() => {
+                if (isVisible) {
+                    const timer = setTimeout(onClose, 2000);
+                    return () => clearTimeout(timer);
+                }
+            }, [isVisible, onClose]);
+
+            if (!isVisible) return null;
+
+            return (
+                <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold text-lg success-message flex items-center gap-3 z-50">
+                    <span>✓</span> Fișier adăugat cu succes!
+                </div>
+            );
+        };
+
+        // Mount SpinningNote
+        const root1 = ReactDOM.createRoot(document.getElementById('spinning-note-root'));
+        root1.render(<SpinningNote />);
+
+        // Mount SuccessMessage
+        const [showSuccess, setShowSuccess] = React.useState(false);
+        const root2 = ReactDOM.createRoot(document.getElementById('success-message-root'));
+        
+        window.showSuccessMessage = () => {
+            setShowSuccess(true);
+        };
+
+        const updateMessage = () => {
+            root2.render(
+                <SuccessMessage 
+                    isVisible={showSuccess} 
+                    onClose={() => setShowSuccess(false)} 
+                />
+            );
+        };
+
+        // Update when showSuccess changes
+        React.useEffect(updateMessage, [showSuccess]);
+        updateMessage();
+    </script>
+
+    <script>
         document.body.addEventListener('htmx:xhr:progress', function(evt) {
             if(evt.detail.lengthComputable) {
                 var percent = (evt.detail.loaded / evt.detail.total) * 100;
