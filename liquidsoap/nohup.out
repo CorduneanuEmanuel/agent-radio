@@ -341,3 +341,978 @@
 2026/05/06 08:17:27 [/radio:3] Connecting mount /radio for source@localhost...
 2026/05/06 08:17:27 [/radio:2] Connection failed: 403, Forbidden (HTTP/1.0)
 2026/05/06 08:17:27 [/radio:3] Will try again in 3.00 sec.
+2026/06/09 03:02:01 >>> LOG START
+2026/06/09 03:01:52 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 03:01:52 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 03:01:52 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 03:01:52 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 03:02:00 [main:3] Standard library loaded in 8.19 seconds.
+2026/06/09 03:02:01 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 03:02:01 [frame:3] Video frame size set to: 1280x720
+2026/06/09 03:02:01 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 03:02:01 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 03:02:01 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 03:02:01 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 03:02:01 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 03:02:01 [startup:3] FFmpeg filters registration: 0.04s
+2026/06/09 03:02:01 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 03:02:01 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 03:02:01 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 03:02:01 [startup:3] Typechecking: 7.72s
+2026/06/09 03:02:01 [startup:3] Evaluation: 0.03s
+2026/06/09 03:02:01 [startup:3] Typechecking: 0.08s
+2026/06/09 03:02:01 [startup:3] Evaluation: 0.01s
+2026/06/09 03:02:01 [startup:3] Typechecking: 0.01s
+2026/06/09 03:02:01 [startup:3] Evaluation: 0.00s
+2026/06/09 03:02:01 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 03:02:01 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:02:01 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:02:01 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:02:01 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 03:02:01 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 03:02:01 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 03:02:01 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 03:02:01 [video.text:3] Using gd implementation
+2026/06/09 03:02:01 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:02:01 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 03:02:01 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:02:01 [mksafe:3] Switch to safe_blank.
+2026/06/09 03:02:01 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 0).
+2026/06/09 03:02:01 [mksafe:3] Switch to music with transition.
+2026/06/09 03:02:01 [/radio:3] Connecting mount /radio for source@localhost...
+[mp3float @ 0x77faa4096240] Could not update timestamps for skipped samples.
+2026/06/09 03:02:01 [/radio:3] Connection setup was successful.
+2026/06/09 03:02:01 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 03:02:01 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:02:01 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 03:02:08 [main:3] Shutdown signal received.
+2026/06/09 03:02:08 [threads:3] Main loop exited
+2026/06/09 03:02:08 [main:3] Shutdown started!
+2026/06/09 03:02:08 [threads:3] Waiting for main threads to terminate...
+2026/06/09 03:02:08 [/radio:3] Closing connection...
+2026/06/09 03:02:08 [clock.main:3] Streaming loop stopped.
+2026/06/09 03:02:08 [threads:3] Main threads terminated.
+2026/06/09 03:02:08 [threads:3] Shutting down scheduler...
+2026/06/09 03:02:08 [threads:3] Scheduler shut down.
+2026/06/09 03:02:08 [main:3] Cleaning downloaded files...
+2026/06/09 03:02:08 [main:3] Freeing memory...
+2026/06/09 03:02:08 >>> LOG END
+2026/06/09 03:02:19 >>> LOG START
+2026/06/09 03:02:11 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 03:02:11 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 03:02:11 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 03:02:11 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 03:02:19 [main:3] Standard library loaded in 8.05 seconds.
+2026/06/09 03:02:19 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 03:02:19 [frame:3] Video frame size set to: 1280x720
+2026/06/09 03:02:19 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 03:02:19 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 03:02:19 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 03:02:19 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 03:02:19 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 03:02:19 [startup:3] FFmpeg filters registration: 0.04s
+2026/06/09 03:02:19 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 03:02:19 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 03:02:19 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 03:02:19 [startup:3] Typechecking: 7.61s
+2026/06/09 03:02:19 [startup:3] Evaluation: 0.02s
+2026/06/09 03:02:19 [startup:3] Typechecking: 0.06s
+2026/06/09 03:02:19 [startup:3] Evaluation: 0.01s
+2026/06/09 03:02:19 [startup:3] Typechecking: 0.01s
+2026/06/09 03:02:19 [startup:3] Evaluation: 0.00s
+2026/06/09 03:02:19 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 03:02:19 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:02:19 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:02:19 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:02:19 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 03:02:19 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 03:02:19 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 03:02:19 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 03:02:19 [video.text:3] Using gd implementation
+2026/06/09 03:02:19 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 03:02:19 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:02:19 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 03:02:20 [mksafe:3] Switch to safe_blank.
+2026/06/09 03:02:20 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 0).
+2026/06/09 03:02:20 [mksafe:3] Switch to music with transition.
+2026/06/09 03:02:20 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 03:02:20 [/radio:3] Connection setup was successful.
+[mp3float @ 0x7c8bd8021340] Could not update timestamps for skipped samples.
+2026/06/09 03:02:20 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:02:20 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 03:02:20 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:06:05 >>> LOG START
+2026/06/09 03:05:56 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 03:05:56 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 03:05:56 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 03:05:56 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 03:06:04 [main:3] Standard library loaded in 8.34 seconds.
+2026/06/09 03:06:05 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 03:06:05 [frame:3] Video frame size set to: 1280x720
+2026/06/09 03:06:05 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 03:06:05 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 03:06:05 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 03:06:05 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 03:06:05 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 03:06:05 [startup:3] FFmpeg filters registration: 0.04s
+2026/06/09 03:06:05 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 03:06:05 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 03:06:05 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 03:06:05 [startup:3] Typechecking: 7.92s
+2026/06/09 03:06:05 [startup:3] Evaluation: 0.02s
+2026/06/09 03:06:05 [startup:3] Typechecking: 0.05s
+2026/06/09 03:06:05 [startup:3] Evaluation: 0.01s
+2026/06/09 03:06:05 [startup:3] Typechecking: 0.01s
+2026/06/09 03:06:05 [startup:3] Evaluation: 0.00s
+2026/06/09 03:06:05 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 03:06:05 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:06:05 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:06:05 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:06:05 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 03:06:05 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 03:06:05 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 03:06:05 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 03:06:05 [video.text:3] Using gd implementation
+[mp3 @ 0x753700005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:06:05 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 03:06:05 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:06:05 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x753700005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:06:05 [mksafe:3] Switch to safe_blank.
+[mp3 @ 0x753708004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x753708004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:06:05 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 0).
+2026/06/09 03:06:05 [mksafe:3] Switch to music with transition.
+2026/06/09 03:06:05 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 03:06:05 [/radio:3] Connection setup was successful.
+[mp3 @ 0x7536f8005080] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7536f8005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:06:05 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 03:06:05 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:06:05 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 03:07:05 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x753708004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x753708004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:07:06 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 1).
+2026/06/09 03:07:06 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:07:06 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 03:07:06 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:11:23 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 03:11:24 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 2).
+[mp3float @ 0x7537080212c0] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x753700005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x753700005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 03:11:24 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 03:11:24 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 03:11:24 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x753700005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x753700005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 03:13:39 >>> LOG START
+2026/06/09 03:13:31 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 03:13:31 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 03:13:31 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 03:13:31 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 03:13:39 [main:3] Standard library loaded in 7.58 seconds.
+2026/06/09 03:13:39 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 03:13:39 [frame:3] Video frame size set to: 1280x720
+2026/06/09 03:13:39 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 03:13:39 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 03:13:39 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 03:13:39 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 03:13:39 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 03:13:39 [startup:3] FFmpeg filters registration: 0.04s
+2026/06/09 03:13:39 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 03:13:39 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 03:13:39 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 03:13:39 [startup:3] Typechecking: 7.17s
+2026/06/09 03:13:39 [startup:3] Evaluation: 0.02s
+2026/06/09 03:13:39 [startup:3] Typechecking: 0.05s
+2026/06/09 03:13:39 [startup:3] Evaluation: 0.01s
+2026/06/09 03:13:39 [startup:3] Typechecking: 0.01s
+2026/06/09 03:13:39 [startup:3] Evaluation: 0.00s
+2026/06/09 03:13:39 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 03:13:39 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:13:39 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:13:39 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 03:13:39 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 03:13:39 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 03:13:39 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 03:13:39 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 03:13:39 [video.text:3] Using gd implementation
+2026/06/09 03:13:39 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 03:13:39 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:13:39 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 03:13:39 [mksafe:3] Switch to safe_blank.
+2026/06/09 03:13:39 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 0).
+2026/06/09 03:13:39 [mksafe:3] Switch to music with transition.
+2026/06/09 03:13:39 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 03:13:39 [/radio:3] Connection setup was successful.
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:13:39 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 03:13:39 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:13:39 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 03:17:27 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5748004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:17:28 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 1).
+2026/06/09 03:17:28 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 03:17:28 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:17:28 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 03:20:13 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 03:20:14 [music:3] Prepared "/music/Get It Now.mp3" (RID 2).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 03:20:14 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 03:20:14 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:20:14 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 03:25:12 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 03:25:12 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 3).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:25:12 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 03:25:12 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:25:12 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 03:28:51 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5748004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:28:51 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 4).
+2026/06/09 03:28:51 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:28:51 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 03:28:51 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:29:51 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 03:29:52 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 5).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 03:29:52 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 03:29:52 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 03:29:52 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 03:33:43 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748004c80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748004c80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748004c80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748004c80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 03:33:43 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 6).
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:33:43 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 03:33:43 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:33:43 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 03:34:07 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5748004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:34:07 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 7).
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:34:07 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 03:34:07 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:34:07 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 03:38:25 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574812e600] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480f5280] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:38:25 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 8).
+2026/06/09 03:38:25 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 03:38:25 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:38:25 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 03:42:43 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 03:42:43 [music:3] Prepared "/music/Get It Now.mp3" (RID 9).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 03:42:43 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 03:42:43 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 03:42:43 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 03:47:42 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 03:47:42 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 10).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 03:47:42 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 03:47:42 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:47:42 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 03:51:33 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 03:51:34 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 11).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:51:34 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 03:51:34 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:51:34 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 03:55:21 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574800e7c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574800e7c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:55:22 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 12).
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:55:22 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 03:55:22 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:55:22 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:58:07 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574800e7c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574800e7c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:58:08 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 13).
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 03:58:08 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 03:58:08 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 03:58:08 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 03:59:08 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574800e7c0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574800e7c0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574800e7c0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574800e7c0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 03:59:08 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 14).
+2026/06/09 03:59:08 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 03:59:08 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:59:08 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 03:59:32 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 03:59:32 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 15).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 03:59:32 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 03:59:32 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 03:59:32 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:03:11 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480dc600] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480dc600] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:03:11 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 16).
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:03:11 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 04:03:11 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:03:11 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:04:11 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480dc600] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480f5280] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:04:12 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 17).
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 04:04:12 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 04:04:12 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 04:04:12 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 04:08:29 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748026880] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748026880] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748026880] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748026880] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 04:08:30 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 18).
+2026/06/09 04:08:30 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 04:08:30 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 04:08:30 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 04:08:53 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:08:54 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 19).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:08:54 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 04:08:54 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:08:54 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:12:45 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57481202c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574800e7c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:12:45 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 20).
+2026/06/09 04:12:45 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 04:12:45 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:12:45 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 04:15:31 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:15:31 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 21).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 04:15:31 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 04:15:31 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:15:31 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:19:09 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:19:10 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 22).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 04:19:10 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 04:19:10 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:19:10 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:22:58 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:22:58 [music:3] Prepared "/music/Get It Now.mp3" (RID 23).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 04:22:58 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 04:22:58 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:22:58 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:27:56 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:27:57 [music:3] Prepared "/music/Get It Now.mp3" (RID 24).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:27:57 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 04:27:57 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:27:57 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:32:55 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480bf7c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480992c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:32:56 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 25).
+2026/06/09 04:32:56 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 04:32:56 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:32:56 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 04:35:41 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:35:42 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 26).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:35:42 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 04:35:42 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:35:42 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:39:30 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748013dc0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574812f6c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:39:30 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 27).
+2026/06/09 04:39:30 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 04:39:30 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:39:30 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 04:43:48 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:43:48 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 28).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 04:43:48 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 04:43:48 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 04:43:48 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:47:27 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:47:27 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 29).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:47:27 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 04:47:27 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:47:27 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:51:18 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748125540] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574811f780] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 04:51:18 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 30).
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 04:51:18 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 04:51:18 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 04:51:18 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 04:52:19 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748125540] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748125540] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480a67c0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480a67c0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 04:52:19 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 31).
+2026/06/09 04:52:19 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 04:52:19 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:52:19 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 04:52:42 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:52:43 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 32).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 04:52:43 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 04:52:43 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 04:52:43 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 04:56:31 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 04:56:31 [music:3] Prepared "/music/Get It Now.mp3" (RID 33).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 04:56:31 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 04:56:31 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 04:56:31 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:01:29 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:01:30 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 34).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5740005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5740005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 05:01:30 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 05:01:30 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 05:01:30 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5740005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5740005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:05:21 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574801a6c0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574801a6c0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574801a6c0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574801a6c0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 05:05:21 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 35).
+2026/06/09 05:05:21 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 05:05:21 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:05:21 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 05:05:45 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:05:45 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 36).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:05:45 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 05:05:45 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:05:45 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:09:23 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480afc00] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574955fec0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:09:24 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 37).
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:09:24 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 05:09:24 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:09:24 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:13:42 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480f4500] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:13:42 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 38).
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:13:42 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 05:13:42 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:13:42 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:14:42 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574801a6c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574801a6c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:14:43 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 39).
+2026/06/09 05:14:43 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 05:14:43 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:14:43 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 05:17:28 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:17:29 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 40).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:17:29 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 05:17:29 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:17:29 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:21:07 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480a67c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574801a6c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:21:07 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 41).
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 05:21:07 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 05:21:07 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 05:21:07 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 05:25:25 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574801a6c0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574801a6c0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574801a6c0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574801a6c0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 05:25:26 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 42).
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:25:26 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 05:25:26 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:25:26 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:25:49 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574801a6c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574801a6c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:25:49 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 43).
+2026/06/09 05:25:49 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 05:25:49 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:25:49 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 05:26:50 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:26:50 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 44).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 05:26:50 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 05:26:50 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:26:50 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:30:38 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:30:38 [music:3] Prepared "/music/Get It Now.mp3" (RID 45).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 05:30:38 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 05:30:38 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 05:30:38 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:35:37 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:35:37 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 46).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:35:37 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 05:35:37 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:35:37 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:39:28 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748011480] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5748011480] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:39:29 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 47).
+2026/06/09 05:39:29 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 05:39:29 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 05:39:29 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 05:42:14 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:42:15 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 48).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738261400] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:42:15 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 05:42:15 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:42:15 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738261400] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:46:06 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574800da00] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574800d900] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:46:06 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 49).
+[mp3 @ 0x7b5738261400] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:46:06 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 05:46:06 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:46:06 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738261400] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:50:24 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:50:24 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 50).
+2026/06/09 05:50:24 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 05:50:24 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:50:24 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 05:53:10 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:53:10 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 51).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738261400] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:53:10 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 05:53:10 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:53:10 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738261400] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 05:56:58 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574956c140] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 05:56:59 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 52).
+2026/06/09 05:56:59 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 05:56:59 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:56:59 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 05:57:59 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 05:57:59 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 53).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 05:57:59 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 05:57:59 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 05:57:59 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:01:37 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:01:38 [music:3] Prepared "/music/Get It Now.mp3" (RID 54).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738261400] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738261400] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 06:01:38 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 06:01:38 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 06:01:38 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738261400] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738261400] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:06:36 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480f3dc0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480f3dc0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480f3dc0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480f3dc0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 06:06:37 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 55).
+2026/06/09 06:06:37 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 06:06:37 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:06:37 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 06:07:00 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:07:00 [music:3] Prepared "/music/Get It Now.mp3" (RID 56).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 06:07:00 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 06:07:00 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 06:07:00 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:11:59 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:11:59 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 57).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738261400] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738261400] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 06:11:59 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 06:11:59 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 06:11:59 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738261400] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738261400] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:15:50 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574955af80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574955af80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574955af80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574955af80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 06:15:51 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 58).
+[mp3 @ 0x7b57400309c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:15:51 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 06:15:51 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:15:51 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:16:14 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748011480] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5748011480] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:16:14 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 59).
+2026/06/09 06:16:14 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 06:16:14 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:16:14 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 06:19:00 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 06:19:00 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 60).
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:19:00 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 06:19:00 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:19:00 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:22:39 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574801a8c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574801a8c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:22:39 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 61).
+[mp3 @ 0x7b5738261400] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:22:39 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 06:22:39 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:22:39 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738261400] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:23:39 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574811f780] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480ae7c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:23:40 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 62).
+2026/06/09 06:23:40 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 06:23:40 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:23:40 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 06:27:58 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:27:58 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 63).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5740005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:27:58 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 06:27:58 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:27:58 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b574002ec80] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:31:46 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:31:46 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 64).
+2026/06/09 06:31:46 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 06:31:46 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 06:31:46 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 06:34:32 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:34:32 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 65).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b573828b840] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b573828b840] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 06:34:32 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 06:34:32 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 06:34:32 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b573828b840] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b573828b840] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:38:23 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480a5c00] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480a5c00] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480a5c00] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480a5c00] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 06:38:24 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 66).
+2026/06/09 06:38:24 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 06:38:24 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:38:24 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 06:38:47 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:38:48 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 67).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 06:38:48 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 06:38:48 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:38:48 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:42:26 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:42:26 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 68).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b573828b840] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:42:26 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 06:42:26 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:42:26 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b573828b840] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:46:14 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480b8c40] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5748124380] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:46:15 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 69).
+[mp3 @ 0x7b573828b840] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:46:15 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 06:46:15 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:46:15 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b573828b840] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:50:32 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748039cc0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480f3d80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:50:33 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 70).
+2026/06/09 06:50:33 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 06:50:33 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:50:33 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 06:51:33 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:51:33 [music:3] Prepared "/music/Get It Now.mp3" (RID 71).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b573828b840] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:51:33 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 06:51:33 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:51:33 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b573828b840] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 06:56:32 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574801a980] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574809dec0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 06:56:32 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 72).
+2026/06/09 06:56:32 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 06:56:32 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 06:56:32 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 06:57:32 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 06:57:33 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 73).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 06:57:33 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 06:57:33 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 06:57:33 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 07:01:24 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 07:01:24 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 74).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738288900] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:01:24 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 07:01:24 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:01:24 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738288900] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 07:05:12 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748004bc0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574812dd00] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:05:13 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 75).
+2026/06/09 07:05:13 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 07:05:13 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:05:13 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 07:07:58 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 07:07:59 [music:3] Prepared "/music/Get It Now.mp3" (RID 76).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738248080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738248080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738248080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738248080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 07:07:59 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 07:07:59 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 07:07:59 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 07:12:57 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748011480] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748011480] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748011480] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5748011480] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 07:12:57 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 77).
+[mp3 @ 0x7b5738248080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:12:57 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 07:12:57 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:12:57 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738248080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:13:21 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b5748013c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574801a0c0] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:13:21 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 78).
+2026/06/09 07:13:21 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 07:13:21 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:13:21 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 07:17:39 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 07:17:39 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 79).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738248080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738248080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 07:17:39 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 07:17:39 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 07:17:39 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738248080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b5738248080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 07:21:18 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574800bc40] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574800bc40] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480b92c0] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b57480b92c0] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 07:21:18 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 80).
+[mp3 @ 0x7b5738248080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:21:18 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 07:21:18 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:21:18 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738248080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:21:41 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480b92c0] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b5748004d80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:21:42 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 81).
+2026/06/09 07:21:42 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 07:21:42 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 07:21:42 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 07:26:00 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 07:26:00 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 82).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 07:26:00 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 07:26:00 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:26:00 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 07:29:51 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 07:29:51 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 83).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5738248080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:29:51 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 07:29:51 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:29:51 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5738248080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 07:33:30 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480dc600] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:33:30 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 84).
+[mp3 @ 0x7b5740022440] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:33:30 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 07:33:30 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:33:30 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b5740022440] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:34:30 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b57480a5c00] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:34:31 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 85).
+2026/06/09 07:34:31 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 07:34:31 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:34:31 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 07:37:16 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 07:37:17 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 86).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+2026/06/09 07:37:17 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 07:37:17 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:37:17 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 07:41:05 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 07:41:05 [music:3] Prepared "/music/Get It Now.mp3" (RID 87).
+[mp3float @ 0x7b5748021340] Could not update timestamps for skipped samples.
+[mp3 @ 0x7b5740022440] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:41:05 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 07:41:05 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:41:05 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7b574002ec80] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7b5748021340] Could not update timestamps for discarded samples.
+2026/06/09 07:46:04 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7b574811f780] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7b574814de00] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:46:04 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 88).
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574002ec80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574002ec80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 07:46:04 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 07:46:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 07:46:04 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574002ec80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7b574002ec80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 07:48:38 [main:3] Shutdown signal received.
+2026/06/09 07:48:38 [threads:3] Main loop exited
+2026/06/09 07:48:38 [main:3] Shutdown started!
+2026/06/09 07:48:38 [threads:3] Waiting for main threads to terminate...
+2026/06/09 07:48:38 [/radio:3] Closing connection...
+2026/06/09 07:48:38 [clock.main:3] Streaming loop stopped.
+2026/06/09 07:48:38 [threads:3] Main threads terminated.
+2026/06/09 07:48:38 [threads:3] Shutting down scheduler...
+2026/06/09 07:48:38 [threads:3] Scheduler shut down.
+2026/06/09 07:48:38 [main:3] Cleaning downloaded files...

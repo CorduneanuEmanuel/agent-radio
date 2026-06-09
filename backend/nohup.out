@@ -9,3 +9,698 @@ Server starting on :8080
 Server starting on :8080
 Server starting on :8080
 Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+At /root/agent-radio/liquidsoap/radio.liq, line 19, char 2-8:
+  source
+
+Error 5: this value has type
+  unit (inferred at /root/agent-radio/liquidsoap/radio.liq, line 11, char 9-38)
+but it should be a subtype of the type of the value at icecast.liq, line 47, char 67
+  source(_)
+Server starting on :8080
+2026/06/09 02:54:54 >>> LOG START
+2026/06/09 02:54:46 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 02:54:46 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 02:54:46 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 02:54:46 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 02:54:54 [main:3] Standard library loaded in 7.27 seconds.
+2026/06/09 02:54:54 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 02:54:54 [frame:3] Video frame size set to: 1280x720
+2026/06/09 02:54:54 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 02:54:54 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 02:54:54 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 02:54:54 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 02:54:54 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 02:54:54 [startup:3] FFmpeg filters registration: 0.04s
+2026/06/09 02:54:54 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 02:54:54 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 02:54:54 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 02:54:54 [startup:3] Typechecking: 6.88s
+2026/06/09 02:54:54 [startup:3] Evaluation: 0.02s
+2026/06/09 02:54:54 [startup:3] Typechecking: 0.05s
+2026/06/09 02:54:54 [startup:3] Evaluation: 0.00s
+2026/06/09 02:54:54 [startup:3] Typechecking: 0.01s
+2026/06/09 02:54:54 [startup:3] Evaluation: 0.00s
+2026/06/09 02:54:54 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 02:54:54 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:54:54 [on_track:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:54:54 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:54:54 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:54:54 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 02:54:54 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 02:54:54 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 02:54:54 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 02:54:54 [video.text:3] Using gd implementation
+2026/06/09 02:54:54 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 02:54:54 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 02:54:54 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 02:54:54 [mksafe:3] Switch to safe_blank.
+2026/06/09 02:54:54 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 0).
+2026/06/09 02:54:54 [mksafe:3] Switch to music with transition.
+2026/06/09 02:54:54 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 02:54:54 [/radio:3] Connection setup was successful.
+[mp3float @ 0x750440021340] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x750430005040] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x750430005040] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 02:54:54 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 02:54:54 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 02:54:54 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x750430005040] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x750430005040] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 02:58:36 [main:3] Shutdown signal received.
+2026/06/09 02:58:36 [threads:3] Main loop exited
+2026/06/09 02:58:36 [main:3] Shutdown started!
+2026/06/09 02:58:36 [threads:3] Waiting for main threads to terminate...
+2026/06/09 02:58:36 [/radio:3] Closing connection...
+2026/06/09 02:58:36 [clock.main:3] Streaming loop stopped.
+2026/06/09 02:58:36 [threads:3] Main threads terminated.
+2026/06/09 02:58:36 [threads:3] Shutting down scheduler...
+2026/06/09 02:58:36 [threads:3] Scheduler shut down.
+2026/06/09 02:58:36 [main:3] Cleaning downloaded files...
+2026/06/09 02:58:36 [main:3] Freeing memory...
+2026/06/09 02:58:36 >>> LOG END
+2026/06/09 02:58:44 >>> LOG START
+2026/06/09 02:58:36 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 02:58:36 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 02:58:36 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 02:58:36 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 02:58:43 [main:3] Standard library loaded in 7.64 seconds.
+2026/06/09 02:58:44 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 02:58:44 [frame:3] Video frame size set to: 1280x720
+2026/06/09 02:58:44 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 02:58:44 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 02:58:44 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 02:58:44 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 02:58:44 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 02:58:44 [startup:3] FFmpeg filters registration: 0.04s
+2026/06/09 02:58:44 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 02:58:44 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 02:58:44 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 02:58:44 [startup:3] Typechecking: 7.19s
+2026/06/09 02:58:44 [startup:3] Evaluation: 0.02s
+2026/06/09 02:58:44 [startup:3] Typechecking: 0.05s
+2026/06/09 02:58:44 [startup:3] Evaluation: 0.00s
+2026/06/09 02:58:44 [startup:3] Typechecking: 0.01s
+2026/06/09 02:58:44 [startup:3] Evaluation: 0.00s
+2026/06/09 02:58:44 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 02:58:44 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:58:44 [on_track:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:58:44 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:58:44 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:58:44 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 02:58:44 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 02:58:44 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 02:58:44 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 02:58:44 [video.text:3] Using gd implementation
+[mp3 @ 0x7d6a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 02:58:44 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 02:58:44 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 02:58:44 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7d6a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 02:58:44 [mksafe:3] Switch to safe_blank.
+[mp3 @ 0x7d6a84004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7d6a84004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 02:58:44 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 0).
+2026/06/09 02:58:44 [mksafe:3] Switch to music with transition.
+2026/06/09 02:58:44 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 02:58:44 [/radio:3] Connection setup was successful.
+[mp3 @ 0x7d6a78005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 02:58:44 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 02:58:44 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 02:58:44 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7d6a78005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 02:59:12 [main:3] Shutdown signal received.
+2026/06/09 02:59:12 [threads:3] Main loop exited
+2026/06/09 02:59:12 [main:3] Shutdown started!
+2026/06/09 02:59:12 [threads:3] Waiting for main threads to terminate...
+2026/06/09 02:59:12 [/radio:3] Closing connection...
+2026/06/09 02:59:12 [clock.main:3] Streaming loop stopped.
+2026/06/09 02:59:12 [threads:3] Main threads terminated.
+2026/06/09 02:59:12 [threads:3] Shutting down scheduler...
+2026/06/09 02:59:12 [threads:3] Scheduler shut down.
+2026/06/09 02:59:12 [main:3] Cleaning downloaded files...
+2026/06/09 02:59:12 [main:3] Freeing memory...
+2026/06/09 02:59:12 >>> LOG END
+2026/06/09 02:59:22 >>> LOG START
+2026/06/09 02:59:14 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 02:59:14 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 02:59:14 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 02:59:14 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 02:59:21 [main:3] Standard library loaded in 7.43 seconds.
+2026/06/09 02:59:22 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 02:59:22 [frame:3] Video frame size set to: 1280x720
+2026/06/09 02:59:22 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 02:59:22 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 02:59:22 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 02:59:22 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 02:59:22 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 02:59:22 [startup:3] FFmpeg filters registration: 0.04s
+2026/06/09 02:59:22 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 02:59:22 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 02:59:22 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 02:59:22 [startup:3] Typechecking: 6.99s
+2026/06/09 02:59:22 [startup:3] Evaluation: 0.02s
+2026/06/09 02:59:22 [startup:3] Typechecking: 0.06s
+2026/06/09 02:59:22 [startup:3] Evaluation: 0.00s
+2026/06/09 02:59:22 [startup:3] Typechecking: 0.01s
+2026/06/09 02:59:22 [startup:3] Evaluation: 0.00s
+2026/06/09 02:59:22 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 02:59:22 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:59:22 [on_track:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:59:22 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:59:22 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 02:59:22 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 02:59:22 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 02:59:22 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 02:59:22 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 02:59:22 [video.text:3] Using gd implementation
+[mp3 @ 0x702b2c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 02:59:22 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 02:59:22 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 02:59:22 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x702b2c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 02:59:22 [mksafe:3] Switch to safe_blank.
+[mp3 @ 0x702b34004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x702b34004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 02:59:22 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 0).
+2026/06/09 02:59:22 [mksafe:3] Switch to music with transition.
+2026/06/09 02:59:22 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 02:59:22 [/radio:3] Connection setup was successful.
+2026/06/09 02:59:22 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 02:59:22 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 02:59:22 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 03:01:52 [main:3] Shutdown signal received.
+2026/06/09 03:01:52 [threads:3] Main loop exited
+2026/06/09 03:01:52 [main:3] Shutdown started!
+2026/06/09 03:01:52 [threads:3] Waiting for main threads to terminate...
+2026/06/09 03:01:52 [/radio:3] Closing connection...
+2026/06/09 03:01:52 [clock.main:3] Streaming loop stopped.
+2026/06/09 03:01:52 [threads:3] Main threads terminated.
+2026/06/09 03:01:52 [threads:3] Shutting down scheduler...
+2026/06/09 03:01:52 [threads:3] Scheduler shut down.
+2026/06/09 03:01:52 [main:3] Cleaning downloaded files...
+Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+Server starting on :8080
+2026/06/09 07:48:47 >>> LOG START
+2026/06/09 07:48:38 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 07:48:38 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 07:48:38 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 07:48:38 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 07:48:46 [main:3] Standard library loaded in 8.58 seconds.
+2026/06/09 07:48:47 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 07:48:47 [frame:3] Video frame size set to: 1280x720
+2026/06/09 07:48:47 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 07:48:47 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 07:48:47 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 07:48:47 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 07:48:47 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 07:48:47 [startup:3] FFmpeg filters registration: 0.05s
+2026/06/09 07:48:47 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 07:48:47 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 07:48:47 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 07:48:47 [startup:3] Typechecking: 8.11s
+2026/06/09 07:48:47 [startup:3] Evaluation: 0.02s
+2026/06/09 07:48:47 [startup:3] Typechecking: 0.06s
+2026/06/09 07:48:47 [startup:3] Evaluation: 0.01s
+2026/06/09 07:48:47 [startup:3] Typechecking: 0.01s
+2026/06/09 07:48:47 [startup:3] Evaluation: 0.00s
+2026/06/09 07:48:47 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 07:48:47 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 07:48:47 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 07:48:47 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 07:48:47 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 07:48:47 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 07:48:47 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 07:48:47 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 07:48:47 [video.text:3] Using gd implementation
+2026/06/09 07:48:47 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 07:48:47 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:48:47 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 07:48:47 [mksafe:3] Switch to safe_blank.
+2026/06/09 07:48:47 [music:3] Prepared "/music/Get It Now.mp3" (RID 0).
+2026/06/09 07:48:47 [mksafe:3] Switch to music with transition.
+2026/06/09 07:48:47 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 07:48:47 [/radio:3] Connection setup was successful.
+[mp3float @ 0x7d59200129c0] Could not update timestamps for skipped samples.
+2026/06/09 07:48:47 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 07:48:47 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:48:47 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+Server starting on :8080
+2026/06/09 07:52:58 [main:3] Shutdown signal received.
+2026/06/09 07:52:58 [threads:3] Main loop exited
+2026/06/09 07:52:58 [main:3] Shutdown started!
+2026/06/09 07:52:58 [threads:3] Waiting for main threads to terminate...
+2026/06/09 07:52:58 [/radio:3] Closing connection...
+2026/06/09 07:52:58 [clock.main:3] Streaming loop stopped.
+2026/06/09 07:52:58 [threads:3] Main threads terminated.
+2026/06/09 07:52:58 [threads:3] Shutting down scheduler...
+2026/06/09 07:52:58 [threads:3] Scheduler shut down.
+2026/06/09 07:52:58 [main:3] Cleaning downloaded files...
+2026/06/09 07:52:58 [main:3] Freeing memory...
+2026/06/09 07:52:58 >>> LOG END
+2026/06/09 07:53:07 >>> LOG START
+2026/06/09 07:52:58 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 07:52:58 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 07:52:58 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 07:52:58 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 07:53:07 [main:3] Standard library loaded in 8.68 seconds.
+2026/06/09 07:53:07 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 07:53:07 [frame:3] Video frame size set to: 1280x720
+2026/06/09 07:53:07 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 07:53:07 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 07:53:07 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 07:53:07 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 07:53:07 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 07:53:07 [startup:3] FFmpeg filters registration: 0.05s
+2026/06/09 07:53:07 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 07:53:07 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 07:53:07 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 07:53:07 [startup:3] Typechecking: 8.24s
+2026/06/09 07:53:07 [startup:3] Evaluation: 0.02s
+2026/06/09 07:53:07 [startup:3] Typechecking: 0.05s
+2026/06/09 07:53:07 [startup:3] Evaluation: 0.00s
+2026/06/09 07:53:07 [startup:3] Typechecking: 0.01s
+2026/06/09 07:53:07 [startup:3] Evaluation: 0.00s
+2026/06/09 07:53:07 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.01s
+2026/06/09 07:53:07 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 07:53:07 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 07:53:07 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 07:53:07 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 07:53:07 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 07:53:07 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 07:53:07 [clock.main:3] Delegating synchronization to CPU clock
+2026/06/09 07:53:07 [video.text:3] Using gd implementation
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:53:07 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 07:53:07 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:53:07 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:53:07 [mksafe:3] Switch to safe_blank.
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 07:53:07 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 0).
+2026/06/09 07:53:07 [mksafe:3] Switch to music with transition.
+2026/06/09 07:53:07 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 07:53:07 [/radio:3] Connection setup was successful.
+2026/06/09 07:53:07 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 07:53:07 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:53:07 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+Server starting on :8080
+Server starting on :8080
+2026/06/09 07:57:25 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 07:57:25 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 1).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+2026/06/09 07:57:25 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 07:57:25 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 07:57:25 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:01:04 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:01:04 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 2).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+2026/06/09 08:01:04 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 08:01:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:01:04 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:04:52 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:04:53 [music:3] Prepared "/music/Get It Now.mp3" (RID 3).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a74005040] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a74005040] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a74005040] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a74005040] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 08:04:53 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 08:04:53 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 08:04:53 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:09:51 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a84004c80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a84004c80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a84004c80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a84004c80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 08:09:51 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 4).
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:09:51 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 08:09:51 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:09:51 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:10:15 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:10:15 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 5).
+2026/06/09 08:10:15 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 08:10:15 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 08:10:15 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 08:13:01 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:13:01 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 6).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+[mp3 @ 0x787a74005040] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:13:01 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 08:13:01 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:13:01 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x787a74005040] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:16:52 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:16:53 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 7).
+[mp3 @ 0x787a74005040] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:16:53 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 08:16:53 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:16:53 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x787a74005040] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:17:53 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:17:53 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 8).
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:17:53 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 08:17:53 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:17:53 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:22:11 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:22:11 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 9).
+2026/06/09 08:22:11 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 08:22:11 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 08:22:11 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 08:23:11 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:23:12 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 10).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+2026/06/09 08:23:12 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 08:23:12 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:23:12 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 08:24:31 [music:3] Reloading playlist with URI /music/.
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:24:31 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 08:24:31 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:24:31 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:26:59 [music:3] Reloading playlist with URI /music/.
+2026/06/09 08:26:59 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 08:26:59 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:26:59 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:27:03 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:27:03 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 13).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+2026/06/09 08:27:03 [decoder.ffmpeg:3] Requested content-type for "/music/Akcent - That's My Name (Ultra Music).mp3": {audio=pcm(stereo)}
+2026/06/09 08:27:03 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Akcent - That's My Name (Ultra Music).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:27:03 [decoder.ffmpeg:3] Decoded content-type for "/music/Akcent - That's My Name (Ultra Music).mp3": {audio=pcm(stereo)}
+2026/06/09 08:27:09 [music:3] Reloading playlist with URI /music/.
+2026/06/09 08:27:09 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 08:27:09 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:27:09 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 08:27:09 [decoder.ffmpeg:3] Requested content-type for "/music/Fly Project - Musica Official Music Video.mp3": {audio=pcm(stereo)}
+2026/06/09 08:27:09 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Fly Project - Musica Official Music Video.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:27:09 [decoder.ffmpeg:3] Decoded content-type for "/music/Fly Project - Musica Official Music Video.mp3": {audio=pcm(stereo)}
+2026/06/09 08:29:34 [music:3] Reloading playlist with URI /music/.
+2026/06/09 08:29:34 [decoder.ffmpeg:3] Requested content-type for "/music/Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3": {audio=pcm(stereo)}
+2026/06/09 08:29:34 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:29:34 [decoder.ffmpeg:3] Decoded content-type for "/music/Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3": {audio=pcm(stereo)}
+2026/06/09 08:30:05 [music:3] Reloading playlist with URI /music/.
+2026/06/09 08:30:05 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 08:30:05 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:30:05 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:30:42 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:30:42 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 18).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a7c005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a7c005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 08:30:42 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 08:30:42 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 08:30:42 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a7c005080] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a7c005080] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:34:20 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a84004c80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a84004c80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a84004c80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x787a84004c80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 08:34:21 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 19).
+2026/06/09 08:34:21 [decoder.ffmpeg:3] Requested content-type for "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3": {audio=pcm(stereo)}
+2026/06/09 08:34:21 [decoder.ffmpeg:3] FFmpeg recognizes "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:34:21 [decoder.ffmpeg:3] Decoded content-type for "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3": {audio=pcm(stereo)}
+2026/06/09 08:34:44 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:34:45 [music:3] Prepared "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3" (RID 20).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+2026/06/09 08:34:45 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 08:34:45 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:34:45 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:38:26 [decoder:2] Decoding "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:38:26 [music:3] Prepared "/music/Get It Now.mp3" (RID 21).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:38:26 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 08:38:26 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:38:26 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x787a7c005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:43:25 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x787a84004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x787a84ab2a80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:43:25 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 22).
+2026/06/09 08:43:25 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 08:43:25 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:43:25 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+Server starting on :8080
+Server starting on :8080
+2026/06/09 08:46:11 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:46:11 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 23).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+2026/06/09 08:46:11 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 08:46:11 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 08:46:11 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+Server starting on :8080
+Server starting on :8080
+TRACK STARTED CALLED POST
+Track started: map[filename:/music/test.mp3]
+song not found in db: sql: no rows in result set
+[mp3float @ 0x787a840212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:49:59 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:49:59 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 24).
+[mp3float @ 0x787a840212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 08:49:59 [decoder.ffmpeg:3] Requested content-type for "/music/Sete De Noi x Desert Rain (Adrian Sasca Remix).mp3": {audio=pcm(stereo)}
+2026/06/09 08:49:59 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Sete De Noi x Desert Rain (Adrian Sasca Remix).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:49:59 [decoder.ffmpeg:3] Decoded content-type for "/music/Sete De Noi x Desert Rain (Adrian Sasca Remix).mp3": {audio=pcm(stereo)}
+2026/06/09 08:50:53 [main:3] Shutdown signal received.
+2026/06/09 08:50:53 [threads:3] Main loop exited
+2026/06/09 08:50:53 [main:3] Shutdown started!
+2026/06/09 08:50:53 [threads:3] Waiting for main threads to terminate...
+2026/06/09 08:50:53 [/radio:3] Closing connection...
+2026/06/09 08:50:53 [clock.main:3] Streaming loop stopped.
+2026/06/09 08:50:53 [threads:3] Main threads terminated.
+2026/06/09 08:50:53 [threads:3] Shutting down scheduler...
+2026/06/09 08:50:53 [threads:3] Scheduler shut down.
+2026/06/09 08:50:53 [main:3] Cleaning downloaded files...
+2026/06/09 08:51:04 >>> LOG START
+2026/06/09 08:50:54 [ffmpeg.filter.bitstream:3] No valid mode found for filter pgs_frame_merge!
+2026/06/09 08:50:54 [main:3] Liquidsoap 2.2.4-1+dev
+2026/06/09 08:50:54 [main:3] Using: alsa=0.3.0 angstrom=0.16.0 ao=0.2.4 bigarray=[distributed with Ocaml] bigstringaf=0.9.1 bjack=0.1.6 bytes=[distributed with OCaml 4.02 or above] camlimages.all_formats=4.2.6 camlimages.core=5.0.4 camlimages.exif=5.0.4 camlimages.gif=5.0.4 camlimages.jpeg=5.0.4 camlimages.png=5.0.4 camlimages.tiff=5.0.4 camlimages.xpm=5.0.4 camlp-streams camomile.lib=2.0 cry=1.0.3 curl=0.9.2 dssi=0.1.5 dtools=0.4.5 dune-build-info=3.14.0 dune-private-libs.dune-section=3.14.0 dune-site=3.14.0 dune-site.private=3.14.0 duppy=0.9.4 faad=0.5.1 ffmpeg-av=1.1.11 ffmpeg-avcodec=1.1.11 ffmpeg-avdevice=1.1.11 ffmpeg-avfilter=1.1.11 ffmpeg-avutil=1.1.11 ffmpeg-swresample=1.1.11 ffmpeg-swscale=1.1.11 fileutils flac=0.5.0 flac.decoder=0.5.0 flac.ogg=0.5.0 frei0r=0.1.2 gd=0.5.1 gen=1.1 graphics=5.1.2 inotify=2.0-62-g5e58536 ladspa=0.2.2 lame=0.3.7 liquidsoap-lang=2.2.4-1 liquidsoap-lang.console=2.2.4-1 liquidsoap_alsa liquidsoap_ao liquidsoap_bjack liquidsoap_builtins liquidsoap_camlimages liquidsoap_core liquidsoap_dssi liquidsoap_faad liquidsoap_ffmpeg liquidsoap_flac liquidsoap_frei0r liquidsoap_gd liquidsoap_graphics liquidsoap_ladspa liquidsoap_lame liquidsoap_lo liquidsoap_mad liquidsoap_ogg liquidsoap_ogg_flac liquidsoap_optionals liquidsoap_opus liquidsoap_oss liquidsoap_portaudio liquidsoap_pulseaudio liquidsoap_runtime liquidsoap_samplerate liquidsoap_shine liquidsoap_soundtouch liquidsoap_speex liquidsoap_ssl liquidsoap_taglib liquidsoap_theora liquidsoap_vorbis liquidsoap_xmlplaylist lo=0.2.0 mad=0.5.2 magic-mime=1.3.1 menhirLib=20231231 metadata=0.3.0 mm=0.8.5 mm.audio=0.8.5 mm.base=0.8.5 mm.image=0.8.5 mm.midi=0.8.5 mm.video=0.8.5 ogg=0.7.4 ogg.decoder=0.7.4 opus=0.2.2 opus.decoder=0.2.2 pcre=7.5.0 portaudio=0.2.3 pulseaudio=0.1.5 re=1.11.0 samplerate=0.1.6 sedlex=3.2 seq=[distributed with OCaml 4.07 or above] shine=0.2.3 soundtouch=0.1.9 speex=0.4.1 speex.decoder=0.4.1 ssl=0.7.0 stdlib-shims=[distributed with OCaml 4.07 or above] str=[distributed with Ocaml] stringext=1.6.0 syslog=2.0.2 taglib=0.3.10 theora=0.4.0 theora.decoder=0.4.0 threads=[distributed with Ocaml] threads.posix=[internal] unix=[distributed with Ocaml] uri=4.4.0 vorbis=0.8.0 vorbis.decoder=0.8.0 xmlm=1.4.0 xmlplaylist=0.1.5
+2026/06/09 08:50:54 [clock:3] Using builtin (low-precision) implementation for latency control
+2026/06/09 08:51:03 [main:3] Standard library loaded in 9.43 seconds.
+2026/06/09 08:51:04 [frame:3] Using 44100Hz audio, 25Hz video, 44100Hz main.
+2026/06/09 08:51:04 [frame:3] Video frame size set to: 1280x720
+2026/06/09 08:51:04 [frame:3] Frame size must be a multiple of 1764 ticks = 1764 audio samples = 1 video samples.
+2026/06/09 08:51:04 [frame:3] Targeting 'frame.duration': 0.04s = 1764 audio samples = 1764 ticks.
+2026/06/09 08:51:04 [frame:3] Frames last 0.04s = 1764 audio samples = 1 video samples = 1764 ticks.
+2026/06/09 08:51:04 [sandbox:3] Could not find binary bwrap, disabling sandboxing.
+2026/06/09 08:51:04 [startup:3] DSSI plugins registration: 0.00s
+2026/06/09 08:51:04 [startup:3] FFmpeg filters registration: 0.05s
+2026/06/09 08:51:04 [startup:3] FFmpeg bitstream filters registration: 0.00s
+2026/06/09 08:51:04 [startup:3] Frei0r plugin registration: 0.00s
+2026/06/09 08:51:04 [startup:3] LADSPA plugins registration: 0.00s
+2026/06/09 08:51:04 [startup:3] Typechecking: 8.93s
+2026/06/09 08:51:04 [startup:3] Evaluation: 0.02s
+2026/06/09 08:51:04 [startup:3] Typechecking: 0.07s
+2026/06/09 08:51:04 [startup:3] Evaluation: 0.01s
+2026/06/09 08:51:04 [startup:3] Typechecking: 0.01s
+2026/06/09 08:51:04 [startup:3] Evaluation: 0.00s
+2026/06/09 08:51:04 [startup:3] Loaded /root/agent-radio/liquidsoap/radio.liq: 0.02s
+2026/06/09 08:51:04 [/radio:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 08:51:04 [music:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 08:51:04 [safe_blank:3] Content type is {audio=pcm(stereo)}.
+2026/06/09 08:51:04 [video.converter:3] Using preferred video converter: ffmpeg.
+2026/06/09 08:51:04 [audio.converter:3] Using samplerate converter: libsamplerate.
+2026/06/09 08:51:04 [video.text:3] Using gd implementation
+2026/06/09 08:51:04 [clock.main:3] Streaming loop starts in auto-sync mode
+2026/06/09 08:51:04 [clock.main:3] Delegating synchronization to CPU clock
+[mp3 @ 0x7ae780005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:51:04 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 08:51:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+[mp3 @ 0x7ae780005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:51:04 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 08:51:04 [mksafe:3] Switch to safe_blank.
+[mp3 @ 0x7ae770004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7ae770004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 08:51:04 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 0).
+2026/06/09 08:51:04 [mksafe:3] Switch to music with transition.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 08:51:04 [/radio:3] Connecting mount /radio for source@localhost...
+2026/06/09 08:51:04 [/radio:3] Connection setup was successful.
+2026/06/09 08:51:04 [decoder.ffmpeg:3] Requested content-type for "/music/Akcent - That's My Name (Ultra Music).mp3": {audio=pcm(stereo)}
+2026/06/09 08:51:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Akcent - That's My Name (Ultra Music).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 08:51:04 [decoder.ffmpeg:3] Decoded content-type for "/music/Akcent - That's My Name (Ultra Music).mp3": {audio=pcm(stereo)}
+2026/06/09 08:53:49 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:53:50 [music:3] Prepared "/music/Akcent - That's My Name (Ultra Music).mp3" (RID 1).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+2026/06/09 08:53:50 [decoder.ffmpeg:3] Requested content-type for "/music/Fly Project - Musica Official Music Video.mp3": {audio=pcm(stereo)}
+song not found in db: sql: no rows in result set
+2026/06/09 08:53:50 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Fly Project - Musica Official Music Video.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:53:50 [decoder.ffmpeg:3] Decoded content-type for "/music/Fly Project - Musica Official Music Video.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 08:58:03 [decoder:2] Decoding "/music/Akcent - That's My Name (Ultra Music).mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 08:58:04 [music:3] Prepared "/music/Fly Project - Musica Official Music Video.mp3" (RID 2).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 08:58:04 [decoder.ffmpeg:3] Requested content-type for "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3": {audio=pcm(stereo)}
+2026/06/09 08:58:04 [decoder.ffmpeg:3] FFmpeg recognizes "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 08:58:04 [decoder.ffmpeg:3] Decoded content-type for "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 09:01:45 [decoder:2] Decoding "/music/Fly Project - Musica Official Music Video.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 09:01:46 [music:3] Prepared "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3" (RID 3).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 09:01:46 [decoder.ffmpeg:3] Requested content-type for "/music/Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3": {audio=pcm(stereo)}
+2026/06/09 09:01:46 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:01:46 [decoder.ffmpeg:3] Decoded content-type for "/music/Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 09:05:27 [decoder:2] Decoding "/music/DJ Antoine vs Timati feat. Kalenna - Welcome to St. Tropez (DJ Antoine vs Mad Mark Remix) [Lyrics].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 09:05:27 [music:3] Prepared "/music/Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3" (RID 4).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 09:05:27 [decoder.ffmpeg:3] Requested content-type for "/music/Sete De Noi x Desert Rain (Adrian Sasca Remix).mp3": {audio=pcm(stereo)}
+2026/06/09 09:05:27 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Sete De Noi x Desert Rain (Adrian Sasca Remix).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:05:27 [decoder.ffmpeg:3] Decoded content-type for "/music/Sete De Noi x Desert Rain (Adrian Sasca Remix).mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 09:09:23 [decoder:2] Decoding "/music/Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 09:09:24 [music:3] Prepared "/music/Sete De Noi x Desert Rain (Adrian Sasca Remix).mp3" (RID 5).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ae774005040] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ae774005040] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 09:09:24 [decoder.ffmpeg:3] Requested content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+2026/06/09 09:09:24 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Krieger - And One [ZTMlVTyFCKw].mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}, video: {codec: h264, 640x480, yuv420p}
+2026/06/09 09:09:24 [decoder.ffmpeg:3] Decoded content-type for "/music/Krieger - And One [ZTMlVTyFCKw].mp3": {audio=pcm(stereo)}
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ae774005040] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ae774005040] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 09:12:26 [decoder:2] Decoding "/music/Sete De Noi x Desert Rain (Adrian Sasca Remix).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ae770004c80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ae770004c80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ae770004c80] st: 0 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ae770004c80] st: 0 edit list 1 Cannot find an index entry before timestamp: 0.
+2026/06/09 09:12:26 [music:3] Prepared "/music/Krieger - And One [ZTMlVTyFCKw].mp3" (RID 6).
+TRACK STARTED CALLED POST
+Track started: map[]
+2026/06/09 09:12:26 [decoder.ffmpeg:3] Requested content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+2026/06/09 09:12:26 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" as audio: {codec: mp3, 48000Hz, 2 channel(s)}
+2026/06/09 09:12:26 [decoder.ffmpeg:3] Decoded content-type for "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3": {audio=pcm(stereo)}
+song not found in db: sql: no rows in result set
+2026/06/09 09:12:50 [decoder:2] Decoding "/music/Krieger - And One [ZTMlVTyFCKw].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 09:12:50 [music:3] Prepared "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" (RID 7).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+2026/06/09 09:12:50 [decoder.ffmpeg:3] Requested content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+2026/06/09 09:12:50 [decoder.ffmpeg:3] FFmpeg recognizes "/music/Get It Now.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:12:50 [decoder.ffmpeg:3] Decoded content-type for "/music/Get It Now.mp3": {audio=pcm(stereo)}
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 09:16:41 [decoder:2] Decoding "/music/Three Days Grace - Animal I Have Become [j7rLdd8EiJQ].mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 09:16:41 [music:3] Prepared "/music/Get It Now.mp3" (RID 8).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 09:16:42 [decoder.ffmpeg:3] Requested content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+2026/06/09 09:16:42 [decoder.ffmpeg:3] FFmpeg recognizes "/music/The Prodigy - Get Your Fight On.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:16:42 [decoder.ffmpeg:3] Decoded content-type for "/music/The Prodigy - Get Your Fight On.mp3": {audio=pcm(stereo)}
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 09:21:40 [decoder:2] Decoding "/music/Get It Now.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 09:21:40 [music:3] Prepared "/music/The Prodigy - Get Your Fight On.mp3" (RID 9).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+[mp3 @ 0x7ae780005080] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 09:21:40 [decoder.ffmpeg:3] Requested content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+2026/06/09 09:21:40 [decoder.ffmpeg:3] FFmpeg recognizes "/music/alec_koff-carnaval-484622.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:21:40 [decoder.ffmpeg:3] Decoded content-type for "/music/alec_koff-carnaval-484622.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7ae780005080] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 09:25:19 [decoder:2] Decoding "/music/The Prodigy - Get Your Fight On.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7ae770004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7ae770004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 09:25:19 [music:3] Prepared "/music/alec_koff-carnaval-484622.mp3" (RID 10).
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 09:25:19 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 09:25:19 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:25:19 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 09:26:19 [decoder:2] Decoding "/music/alec_koff-carnaval-484622.mp3" ended: Ffmpeg_decoder.End_of_file.
+2026/06/09 09:26:20 [music:3] Prepared "/music/SABATON - Primo Victoria (Official Music Video).mp3" (RID 11).
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for skipped samples.
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+[mp3 @ 0x7ae774005040] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 09:26:20 [decoder.ffmpeg:3] Requested content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+2026/06/09 09:26:20 [decoder.ffmpeg:3] FFmpeg recognizes "/music/02 In Your Time Of Sorrow.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:26:20 [decoder.ffmpeg:3] Decoded content-type for "/music/02 In Your Time Of Sorrow.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7ae774005040] Estimating duration from bitrate, this may be inaccurate
+[mp3float @ 0x7ae7700212c0] Could not update timestamps for discarded samples.
+2026/06/09 09:30:07 [decoder:2] Decoding "/music/SABATON - Primo Victoria (Official Music Video).mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7ae770004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7ae770004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 09:30:08 [music:3] Prepared "/music/02 In Your Time Of Sorrow.mp3" (RID 12).
+TRACK STARTED CALLED POST
+Track started: map[]
+[mp3 @ 0x7ae774005040] Estimating duration from bitrate, this may be inaccurate
+song not found in db: sql: no rows in result set
+2026/06/09 09:30:08 [decoder.ffmpeg:3] Requested content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+2026/06/09 09:30:08 [decoder.ffmpeg:3] FFmpeg recognizes "/music/07 Burned Feet.mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:30:08 [decoder.ffmpeg:3] Decoded content-type for "/music/07 Burned Feet.mp3": {audio=pcm(stereo)}
+[mp3 @ 0x7ae774005040] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 09:34:26 [decoder:2] Decoding "/music/02 In Your Time Of Sorrow.mp3" ended: Ffmpeg_decoder.End_of_file.
+[mp3 @ 0x7ae770004c80] Estimating duration from bitrate, this may be inaccurate
+[mp3 @ 0x7ae770004c80] Estimating duration from bitrate, this may be inaccurate
+2026/06/09 09:34:26 [music:3] Prepared "/music/07 Burned Feet.mp3" (RID 13).
+TRACK STARTED CALLED POST
+Track started: map[]
+song not found in db: sql: no rows in result set
+2026/06/09 09:34:26 [decoder.ffmpeg:3] Requested content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 09:34:26 [decoder.ffmpeg:3] FFmpeg recognizes "/music/SABATON - Primo Victoria (Official Music Video).mp3" as audio: {codec: mp3, 44100Hz, 2 channel(s)}
+2026/06/09 09:34:26 [decoder.ffmpeg:3] Decoded content-type for "/music/SABATON - Primo Victoria (Official Music Video).mp3": {audio=pcm(stereo)}
+2026/06/09 09:37:12 [decoder:2] Decoding "/music/07 Burned Feet.mp3" ended: Ffmpeg_decoder.End_of_file.
