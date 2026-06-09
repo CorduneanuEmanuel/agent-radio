@@ -9,6 +9,8 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"sync"
+	"time"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -132,17 +134,86 @@ func main() {
 		defer dst.Close()
 		io.Copy(dst, file)
 
-			result, err := analyzeAudio("/music/" + header.Filename)
-			if err != nil {
-				fmt.Println("analysis error:", err)
-				w.Header().Set("Content-Type", "application/json")
-				json.NewEncoder(w).Encode(map[string]string{"status": "error"})
-				return
-			}
-			saveToDB(db, "/music/"+header.Filename, result)
+		result, err := analyzeAudio("/music/" + header.Filename)
+		if err != nil {
+			fmt.Println("analysis error:", err)
 			w.Header().Set("Content-Type", "application/json")
-			json.NewEncoder(w).Encode(result)
+			json.NewEncoder(w).Encode(map[string]string{"status": "error"})
+			return
+		}
+		saveToDB(db, "/music/"+header.Filename, result)
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(result)
+	})
 
+	var (
+		voteYes      int
+		voteNo       int
+		voteMutex    sync.Mutex
+		songStart    time.Time
+		songDuration float64
+	)
+
+	http.HandleFunc("/track-started", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodPost {
+			http.Error(w, "POST only", http.StatusMethodNotAllowed)
+			return
+		}
+
+		var metadata map[string]interface{}
+		json.NewDecoder(r.Body).Decode(&metadata)
+
+		// Get filepath from Liquidsoap metadata
+		filepath, _ := metadata["filename"].(string)
+		fmt.Println("Track started:", filepath)
+
+		// Reset votes
+		voteMutex.Lock()
+		voteYes = 0
+		voteNo = 0
+		voteMutex.Unlock()
+
+		// Look up duration in SQLite
+		var duration float64
+		err := db.QueryRow("SELECT duration FROM songs WHERE filepath = ?", filepath).Scan(&duration)
+		if err != nil {
+			fmt.Println("song not found in db:", err)
+			w.WriteHeader(http.StatusOK)
+			return
+		}
+
+		songStart = time.Now()
+		songDuration = duration
+		setState(Playing)
+
+		// Start timers in background
+		go func() {
+			// Halfway point - lock voting
+			half := time.Duration(duration/2) * time.Second
+			time.Sleep(half)
+			fmt.Println("Halfway - locking votes in 10s")
+			time.Sleep(10 * time.Second)
+
+			voteMutex.Lock()
+			result := "like"
+			if voteNo > voteYes {
+				result = "dislike"
+			}
+			voteMutex.Unlock()
+			fmt.Println("Vote result:", result)
+
+			// Pipeline trigger at duration - 45s
+			remaining := time.Duration(duration)*time.Second - time.Since(songStart) - 45*time.Second
+			if remaining > 0 {
+				time.Sleep(remaining)
+			}
+
+			setState(Selecting)
+			fmt.Println("Triggering pipeline, vote was:", result)
+			// TODO: call Ollama here
+		}()
+
+		w.WriteHeader(http.StatusOK)
 	})
 
 	http.HandleFunc("/events", func(w http.ResponseWriter, r *http.Request) {
