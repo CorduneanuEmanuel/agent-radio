@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"sync"
 	"time"
 
@@ -27,6 +28,36 @@ const (
 
 var currentState = Idle
 
+var (
+	analyzerPath       = getEnv("ANALYZER_PATH", "../librarian/analizator.py")
+	dbPath             = getEnv("RADIO_DB_PATH", "../librarian/radio_library.db")
+	musicDir           = getEnv("MUSIC_DIR", "../music")
+	frontendDistDir    = os.Getenv("FRONTEND_DIST_DIR")
+	frontendFallbackDir = getEnv("FRONTEND_FALLBACK_DIR", "../frontend")
+)
+
+func getEnv(key, fallback string) string {
+	if value := os.Getenv(key); value != "" {
+		return value
+	}
+	return fallback
+}
+
+func resolveFrontendDir() string {
+	if info, err := os.Stat(frontendFallbackDir); err == nil && info.IsDir() {
+		return frontendFallbackDir
+	}
+	if frontendDistDir != "" {
+		if info, err := os.Stat(frontendDistDir); err == nil && info.IsDir() {
+			return frontendDistDir
+		}
+	}
+	if info, err := os.Stat("../frontend/agent-radio/dist"); err == nil && info.IsDir() {
+		return "../frontend/agent-radio/dist"
+	}
+	return frontendDistDir
+}
+
 func setState(s State) {
 	currentState = s
 	states := map[State]string{
@@ -40,7 +71,7 @@ func setState(s State) {
 }
 
 func analyzeAudio(filePath string) (map[string]interface{}, error) {
-	cmd := exec.Command("python3", "/root/agent-radio/librarian/analizator.py", filePath)
+	cmd := exec.Command("python3", analyzerPath, filePath)
 	output, err := cmd.Output()
 	if err != nil {
 		return nil, err
@@ -96,14 +127,26 @@ func saveToDB(db *sql.DB, filePath string, metadata map[string]interface{}) erro
 }
 
 func main() {
-	db, err := sql.Open("sqlite3", "/root/agent-radio/librarian/radio_library.db")
+	db, err := sql.Open("sqlite3", dbPath)
 	if err != nil {
 		fmt.Println("could not open db:", err)
 		return
 	}
 	defer db.Close()
 
-	http.Handle("/", http.FileServer(http.Dir("/root/agent-radio/frontend/agent-radio/dist")))
+	if err := os.MkdirAll(musicDir, 0o755); err != nil {
+		fmt.Println("could not create music dir:", err)
+		return
+	}
+
+	frontendDir := resolveFrontendDir()
+	fmt.Printf("Serving frontend from: %s\n", frontendDir)
+	fmt.Printf("Using music dir: %s\n", musicDir)
+	fmt.Printf("Using analyzer path: %s\n", analyzerPath)
+
+	registerYouTubeDownloadHandler(db)
+
+	http.Handle("/", http.FileServer(http.Dir(frontendDir)))
 
 	http.HandleFunc("/upload", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -126,7 +169,10 @@ func main() {
 		}
 		defer file.Close()
 
-		dst, err := os.Create("/music/" + header.Filename)
+		safeFileName := filepath.Base(header.Filename)
+		uploadedPath := filepath.Join(musicDir, safeFileName)
+
+		dst, err := os.Create(uploadedPath)
 		if err != nil {
 			http.Error(w, "could not save file", http.StatusInternalServerError)
 			return
@@ -134,14 +180,14 @@ func main() {
 		defer dst.Close()
 		io.Copy(dst, file)
 
-		result, err := analyzeAudio("/music/" + header.Filename)
+		result, err := analyzeAudio(uploadedPath)
 		if err != nil {
 			fmt.Println("analysis error:", err)
 			w.Header().Set("Content-Type", "application/json")
 			json.NewEncoder(w).Encode(map[string]string{"status": "error"})
 			return
 		}
-		saveToDB(db, "/music/"+header.Filename, result)
+		saveToDB(db, uploadedPath, result)
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(result)
 	})
@@ -151,7 +197,6 @@ func main() {
 		voteNo       int
 		voteMutex    sync.Mutex
 		songStart    time.Time
-		songDuration float64
 	)
 
 	http.HandleFunc("/track-started", func(w http.ResponseWriter, r *http.Request) {
@@ -183,7 +228,6 @@ func main() {
 		}
 
 		songStart = time.Now()
-		songDuration = duration
 		setState(Playing)
 
 		// Start timers in background
@@ -226,5 +270,7 @@ func main() {
 	})
 
 	fmt.Println("Server starting on :8080")
-	http.ListenAndServe(":8080", nil)
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		fmt.Println("server stopped:", err)
+	}
 }

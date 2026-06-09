@@ -89,8 +89,8 @@
                         </div>
                     </div>
                     
-                    <audio controls class="w-full h-12 brightness-90 contrast-125 rounded-lg">
-                          <source src="http://167.172.171.185:8000/radio" type="audio/mpeg">
+                      <audio controls class="w-full h-12 brightness-90 contrast-125 rounded-lg">
+                          <source src="http://localhost:8000/radio" type="audio/mpeg">
                     </audio>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                         <div class="w-2.5 h-2.5 rounded-full bg-emerald-500/20"></div>
                     </div>
                 </div>
-                <div class="p-6 h-80 overflow-y-auto scanline relative" hx-ext="sse" sse-connect="http://167.172.171.185:8080/events">
+                <div class="p-6 h-80 overflow-y-auto scanline relative" hx-ext="sse" sse-connect="/events">
                     <div id="ai-output" sse-swap="thoughts" class="mono text-sm leading-relaxed text-emerald-400/90 whitespace-pre-wrap">
                         > Initializing agents...
                         > Waiting for SSE stream from server...
@@ -138,7 +138,7 @@
                     </div>
                 </div>
 
-                <button hx-post="http://167.172.171.185:8080/upload" 
+                <button hx-post="/upload" 
                         hx-include="#file-input" 
                         hx-encoding="multipart/form-data" 
                         hx-target="#stats-display"
@@ -151,7 +151,7 @@
             <div id="stats-display" class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 min-h-[300px] shadow-xl relative overflow-hidden">
                 <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] mb-6">Local Metadata (SQLite)</h3>
                 
-                <div id="metadata-target" hx-ext="sse" sse-connect="http://167.172.171.185:8080/events" sse-swap="metadata">
+                <div id="metadata-target" hx-ext="sse" sse-connect="/events" sse-swap="metadata">
                     <div class="flex flex-col items-center justify-center h-48 text-center text-zinc-500 italic">
                         <svg class="w-12 h-12 mx-auto mb-2 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19V6l12-3v13M9 19c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm12-3c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"></path></svg>
                         Așteptare date...
@@ -159,6 +159,14 @@
                 </div>
 
                 <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-600/5 rounded-full blur-[80px]"></div>
+            </div>
+
+            <div class="bg-zinc-900 border border-zinc-800 rounded-full px-2 py-1 flex items-center gap-2">
+                <input id="yt-input" type="text" placeholder="Link YouTube sau titlu" class="flex-1 bg-transparent text-zinc-100 text-xs px-2 py-1 outline-none" />
+                <button id="yt-import-btn" onclick="importYouTubeTrack()" class="bg-red-600 hover:bg-red-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                    YT
+                </button>
+                <span id="yt-status" class="text-[10px] text-zinc-400 whitespace-nowrap"></span>
             </div>
 
             <div id="success-message-root"></div>
@@ -224,6 +232,64 @@
     </script>
 
     <script>
+        const API_BASE = `${window.location.protocol}//${window.location.hostname || 'localhost'}:8080`;
+
+        async function importYouTubeTrack() {
+            const input = document.getElementById('yt-input');
+            const status = document.getElementById('yt-status');
+            const btn = document.getElementById('yt-import-btn');
+            const value = (input.value || '').trim();
+
+            if (!value) {
+                status.textContent = 'Introdu link sau query';
+                return;
+            }
+
+            btn.disabled = true;
+            status.textContent = 'Se descarca...';
+
+            try {
+                const body = new URLSearchParams({ url: value });
+                const response = await fetch(`${API_BASE}/download-youtube`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body,
+                });
+
+                if (!response.ok) {
+                    const text = await response.text();
+                    throw new Error(text || 'Import esuat');
+                }
+
+                const data = await response.json();
+                                status.textContent = 'OK: analizata';
+                input.value = '';
+
+                                const info = data.analysis?.file_info || {};
+                                const audio = data.analysis?.audio_features || {};
+
+                const target = document.getElementById('metadata-target');
+                target.innerHTML = `
+                  <div class="text-zinc-100 text-sm space-y-1">
+                                        <p><strong>YouTube:</strong> importat + analizat</p>
+                    <p><strong>Path:</strong> ${data.path || 'n/a'}</p>
+                                        <p><strong>Title:</strong> ${info.title || 'Unknown'}</p>
+                                        <p><strong>Artist:</strong> ${info.artist || 'Unknown'}</p>
+                                        <p><strong>Duration:</strong> ${info.duration_sec || 'n/a'}s</p>
+                                        <p><strong>BPM:</strong> ${audio.bpm || 'n/a'}</p>
+                                        <p><strong>Mood:</strong> ${audio.mood_label || 'n/a'}</p>
+                                        <p><strong>Energy:</strong> ${audio.energy || 'n/a'}</p>
+                                        <p><strong>Brightness:</strong> ${audio.brightness || 'n/a'}</p>
+                                        <p><strong>Danceability:</strong> ${audio.danceability || 'n/a'}</p>
+                  </div>
+                `;
+            } catch (err) {
+                status.textContent = err.message || 'Eroare';
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
         document.body.addEventListener('htmx:xhr:progress', function(evt) {
             if(evt.detail.lengthComputable) {
                 var percent = (evt.detail.loaded / evt.detail.total) * 100;

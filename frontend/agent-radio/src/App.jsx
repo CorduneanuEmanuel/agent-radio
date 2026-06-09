@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 
+const API_BASE = (import.meta.env.VITE_API_BASE || "http://localhost:8080").replace(/\/$/, "");
+const STREAM_URL = import.meta.env.VITE_STREAM_URL || "http://localhost:8000/radio";
+
 /* ─── Inline styles that can't be done with Tailwind alone ─── */
 const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap');
@@ -122,7 +125,7 @@ function UploadPanel({ onUploadSuccess }) {
     formData.append("file", file);
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://167.172.171.185:8080/upload");
+    xhr.open("POST", `${API_BASE}/upload`);
 
     xhr.upload.addEventListener("progress", (e) => {
       if (e.lengthComputable) setProgress((e.loaded / e.total) * 100);
@@ -266,12 +269,104 @@ function StatsDisplay({ html }) {
   );
 }
 
+function YouTubeImportBar({ onImportSuccess }) {
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const handleImport = async () => {
+    const value = input.trim();
+    if (!value || loading) return;
+
+    setLoading(true);
+    setStatus("Se descarca audio...");
+
+    try {
+      const response = await fetch(`${API_BASE}/download-youtube`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ url: value }),
+      });
+
+      if (!response.ok) {
+        const errText = await response.text();
+        throw new Error(errText || "Eroare la import YouTube");
+      }
+
+      const data = await response.json();
+      setStatus("Importat, analizat si salvat in DB.");
+      setInput("");
+      onImportSuccess?.(data);
+    } catch (err) {
+      setStatus(err.message || "Eroare la import YouTube");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div
+      style={{
+        background: "#111827",
+        border: "1px solid #1f2937",
+        borderRadius: 9999,
+        padding: "6px 8px",
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+      }}
+    >
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Link YouTube sau titlu"
+        style={{
+          flex: 1,
+          background: "transparent",
+          border: "none",
+          outline: "none",
+          color: "#e5e7eb",
+          fontSize: 12,
+          padding: "2px 6px",
+        }}
+      />
+      <button
+        type="button"
+        onClick={handleImport}
+        disabled={loading}
+        style={{
+          border: "none",
+          borderRadius: 9999,
+          padding: "6px 10px",
+          fontSize: 11,
+          fontWeight: 700,
+          cursor: loading ? "not-allowed" : "pointer",
+          background: loading ? "#374151" : "#dc2626",
+          color: "white",
+          textTransform: "uppercase",
+          letterSpacing: "0.04em",
+        }}
+      >
+        {loading ? "..." : "YT"}
+      </button>
+      {status && (
+        <span style={{ color: "#9ca3af", fontSize: 11, whiteSpace: "nowrap" }}>
+          {status}
+        </span>
+      )}
+    </div>
+  );
+}
+
 /* SSE listener for metadata events */
 function MetadataSSE() {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    const es = new EventSource("http://167.172.171.185:8080/events");
+    const es = new EventSource(`${API_BASE}/events`);
     es.addEventListener("metadata", (e) => setContent(e.data));
     return () => es.close();
   }, []);
@@ -306,7 +401,7 @@ function AIThoughtsPanel() {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    const es = new EventSource("http://167.172.171.185:8080/events");
+    const es = new EventSource(`${API_BASE}/events`);
     es.addEventListener("thoughts", (e) => {
       setThoughts(e.data);
     });
@@ -395,6 +490,26 @@ export default function App() {
       setUploadedHtml("<p>Upload successful</p>");
     }
     setShowSuccess(true);
+  };
+
+  const handleYouTubeImportSuccess = (data) => {
+    const fileInfo = data?.analysis?.file_info || {};
+    const audio = data?.analysis?.audio_features || {};
+    const html = `
+      <div style="color:#e4e4e7">
+        <p><strong>YouTube:</strong> importat + analizat</p>
+        <p><strong>Path:</strong> ${data?.path || "n/a"}</p>
+        <p><strong>Title:</strong> ${fileInfo.title || "Unknown"}</p>
+        <p><strong>Artist:</strong> ${fileInfo.artist || "Unknown"}</p>
+        <p><strong>Duration:</strong> ${fileInfo.duration_sec || "n/a"}s</p>
+        <p><strong>BPM:</strong> ${audio.bpm || "n/a"}</p>
+        <p><strong>Mood:</strong> ${audio.mood_label || "n/a"}</p>
+        <p><strong>Energy:</strong> ${audio.energy || "n/a"}</p>
+        <p><strong>Brightness:</strong> ${audio.brightness || "n/a"}</p>
+        <p><strong>Danceability:</strong> ${audio.danceability || "n/a"}</p>
+      </div>
+    `;
+    setUploadedHtml(html);
   };
 
   return (
@@ -507,7 +622,7 @@ export default function App() {
                 controls
                 style={{ width: "100%", height: 48, borderRadius: 8, filter: "brightness(0.9) contrast(1.25)" }}
               >
-                <source src="http://167.172.171.185:8000/radio" type="audio/mpeg" />
+                <source src={STREAM_URL} type="audio/mpeg" />
               </audio>
             </div>
           </div>
@@ -520,6 +635,7 @@ export default function App() {
         <section style={{ gridColumn: "span 5", display: "flex", flexDirection: "column", gap: 24 }}>
           <UploadPanel onUploadSuccess={handleUploadSuccess} />
           <StatsDisplay html={uploadedHtml} />
+          <YouTubeImportBar onImportSuccess={handleYouTubeImportSuccess} />
         </section>
       </main>
 
