@@ -377,8 +377,23 @@ export default function App() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [uploadedHtml, setUploadedHtml] = useState("");
 
-  const handleUploadSuccess = (responseHtml) => {
-    setUploadedHtml(responseHtml);
+  const handleUploadSuccess = (responseText) => {
+    try {
+      const data = JSON.parse(responseText);
+      const html = `
+      <div style="color:#e4e4e7">
+        <p><strong>Title:</strong> ${data.file_info?.title}</p>
+        <p><strong>Artist:</strong> ${data.file_info?.artist}</p>
+        <p><strong>Duration:</strong> ${data.file_info?.duration_sec}s</p>
+        <p><strong>BPM:</strong> ${data.audio_features?.bpm}</p>
+        <p><strong>Mood:</strong> ${data.audio_features?.mood_label}</p>
+        <p><strong>Energy:</strong> ${data.audio_features?.energy}</p>
+      </div>
+    `;
+      setUploadedHtml(html);
+    } catch {
+      setUploadedHtml("<p>Upload successful</p>");
+    }
     setShowSuccess(true);
   };
 
