@@ -20,26 +20,9 @@ If any step in the pipeline is too slow or fails, the system falls back to a dir
 
 ## Architecture
 
-```
-Browser (HTMX + SSE)
-    │
-    ▼
-Go Backend ──────────────────────────────────────────┐
-    │                                                 │
-    ├── os/exec ──► Audio Analyser (aubio + librosa)  │
-    │                      │                          │
-    │                      ▼                          │
-    │                   SQLite                        │
-    │                                                 │
-    ├── HTTP ────► Ollama (Qwen3)   Director Agent    │
-    ├── HTTP ────► Ollama (Llama 3.3) DJ Agent        │
-    ├── HTTP ────► Chatterbox TTS  :4123              │
-    │                                                 │
-    └── Unix Socket ──► Liquidsoap ──► Icecast :8000  │
-                                           │          │
-                                           ▼          │
-                                     <audio> tag ◄────┘
-```
+
+![diagram of the component architecture](/docs/components_diagram.svg)
+
 
 ---
 

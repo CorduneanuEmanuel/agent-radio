@@ -1,0 +1,7 @@
+frontend/agent-radio/node_modules
+frontend/agent-radio/dist
+melodii/
+backend/backend
+*.out
+librarian/__pycache__
+librarian/*.db
