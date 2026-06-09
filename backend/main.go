@@ -132,7 +132,6 @@ func main() {
 		defer dst.Close()
 		io.Copy(dst, file)
 
-		go func() {
 			result, err := analyzeAudio("/music/" + header.Filename)
 			if err != nil {
 				fmt.Println("analysis error:", err)
@@ -143,9 +142,7 @@ func main() {
 			saveToDB(db, "/music/"+header.Filename, result)
 			w.Header().Set("Content-Type", "application/json")
 			json.NewEncoder(w).Encode(result)
-		}()
 
-		fmt.Fprintln(w, "upload successful")
 	})
 
 	http.HandleFunc("/events", func(w http.ResponseWriter, r *http.Request) {
