@@ -136,9 +136,13 @@ func main() {
 			result, err := analyzeAudio("/music/" + header.Filename)
 			if err != nil {
 				fmt.Println("analysis error:", err)
+				w.Header().Set("Content-Type", "application/json")
+				json.NewEncoder(w).Encode(map[string]string{"status": "error"})
 				return
 			}
 			saveToDB(db, "/music/"+header.Filename, result)
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(result)
 		}()
 
 		fmt.Fprintln(w, "upload successful")
