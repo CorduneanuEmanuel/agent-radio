@@ -337,8 +337,10 @@ function AIThoughtsPanel() {
       >
         <span
           className="mono"
-          style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase",
-            letterSpacing: "0.15em", color: "#10b981" }}
+          style={{
+            fontSize: 12, fontWeight: 700, textTransform: "uppercase",
+            letterSpacing: "0.15em", color: "#10b981"
+          }}
         >
           Ollama Thinking Process
         </span>
@@ -442,7 +444,7 @@ export default function App() {
       {/* Main */}
       <main
         style={{
-          maxWidth: "80%", margin: "0 auto", padding: "0 16px 48px",
+          width: "80%", margin: "0 auto", padding: "0 16px 48px",
           display: "grid",
           gridTemplateColumns: "repeat(12, 1fr)",
           gap: 32,
